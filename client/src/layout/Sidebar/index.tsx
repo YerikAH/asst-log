@@ -20,7 +20,7 @@ const teams = [
 export const Sidebar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
-    <div className="h-screen overflow-auto">
+    <div className="h-screen overflow-hidden">
       <SidebarMobile
         codes={teams}
         navigation={navigation}
@@ -33,7 +33,7 @@ export const Sidebar = () => {
       <div className="lg:pl-72">
         <Navigation setSidebarOpen={setSidebarOpen} />
 
-        <main className="py-10 bg-slate-100 h-screen overflow-auto">
+        <main className="pt-10 pb-[5rem] bg-slate-100 h-screen overflow-auto w-full">
           <div className="px-4 sm:px-6 lg:px-8">
             <Outlet />
           </div>
