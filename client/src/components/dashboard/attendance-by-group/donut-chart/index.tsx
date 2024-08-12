@@ -14,6 +14,15 @@ const getChartOptions = () => {
       colors: ["transparent"],
       lineCap: "",
     },
+    tooltip: {
+      enabled: true,
+      x: {
+        show: false,
+      },
+      style: {
+        fontFamily: "Lexend, sans-serif",
+      },
+    },
     plotOptions: {
       pie: {
         donut: {

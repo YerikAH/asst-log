@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import ApexCharts from "apexcharts";
+import { FilterByDate } from "./filter-by-date";
 
 const options = {
   colors: ["#2563eb"],
@@ -21,7 +22,7 @@ const options = {
 
   chart: {
     type: "bar",
-    height: "320px",
+    height: "300px",
     fontFamily: "Lexend , sans-serif",
     toolbar: {
       show: false,
@@ -125,11 +126,7 @@ export const AttendanceColumnChart = () => {
 
   return (
     <div className="px-4 py-6 rounded-3xl bg-white w-full h-[400px]">
-      <div className="flex items-center justify-between mb-5">
-        <h2 className="font-lexend text-gray-900 font-semibold text-base">
-          Total de asistencias
-        </h2>
-      </div>
+      <FilterByDate />
       <div id="bar-chart"></div>
     </div>
   );
