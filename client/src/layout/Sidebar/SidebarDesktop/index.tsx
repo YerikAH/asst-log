@@ -1,6 +1,7 @@
 import { classNames } from "@/utils";
 import { Cog6ToothIcon } from "@heroicons/react/24/outline";
 import logo from "@/assets/logo-icon-white.png";
+import { Link, useLocation, useNavigation } from "react-router-dom";
 
 interface Props {
   navigation: {
@@ -19,9 +20,10 @@ interface Props {
 }
 
 export const SidebarDesktop = ({ navigation, codes }: Props) => {
+  const location = useLocation()
+
   return (
     <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
-      {/* Sidebar component, swap this element with another sidebar if you like */}
       <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-zinc-900 ">
         <div className="flex h-20 shrink-0 items-center border-b border-b-zinc-800 px-6">
           <img alt="AsstLog" src={logo} className="h-10 w-auto" />
@@ -32,10 +34,10 @@ export const SidebarDesktop = ({ navigation, codes }: Props) => {
               <ul role="list" className="-mx-2 space-y-1">
                 {navigation.map((item) => (
                   <li key={item.name}>
-                    <a
-                      href={item.href}
+                    <Link
+                      to={item.href}
                       className={classNames(
-                        item.current
+                        location.pathname === item.href
                           ? "bg-zinc-800 text-white"
                           : "text-gray-400 hover:bg-zinc-800 hover:text-white",
                         "group flex gap-x-3 rounded-full py-3 px-4 text-sm font-semibold leading-6 font-lexend"
@@ -46,7 +48,7 @@ export const SidebarDesktop = ({ navigation, codes }: Props) => {
                         className="h-6 w-6 shrink-0"
                       />
                       {item.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -58,8 +60,8 @@ export const SidebarDesktop = ({ navigation, codes }: Props) => {
               <ul role="list" className="-mx-2 mt-2 space-y-1">
                 {codes.map((code) => (
                   <li key={code.name}>
-                    <a
-                      href={code.href}
+                    <Link
+                      to={code.href}
                       className={classNames(
                         code.current
                           ? "bg-zinc-800 text-white"
@@ -71,7 +73,7 @@ export const SidebarDesktop = ({ navigation, codes }: Props) => {
                         {code.initial}
                       </span>
                       <span className="truncate font-lexend">{code.name}</span>
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FolderIcon, HomeIcon, UsersIcon } from "@heroicons/react/24/outline";
+import { Cog6ToothIcon, HomeIcon, UsersIcon } from "@heroicons/react/24/outline";
 
 import { Outlet } from "react-router-dom";
 import { SidebarDesktop } from "./SidebarDesktop";
@@ -7,14 +7,13 @@ import { SidebarMobile } from "./SidebarMobile";
 import { Navigation } from "./Navigation";
 
 const navigation = [
-  { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
-  { name: "Team", href: "#", icon: UsersIcon, current: false },
-  { name: "Projects", href: "#", icon: FolderIcon, current: false },
+  { name: "Dashboard", href: "/dashboard", icon: HomeIcon, current: true },
+  { name: "Asistencia", href: "/attendance-group", icon: UsersIcon, current: false },
+  { name: "Configuración", href: "/settings", icon: Cog6ToothIcon, current: false },
 ];
 const teams = [
-  { id: 1, name: "Heroicons", href: "#", initial: "H", current: false },
-  { id: 2, name: "Tailwind Labs", href: "#", initial: "T", current: false },
-  { id: 3, name: "Workcation", href: "#", initial: "W", current: false },
+  { id: 1, name: "Arte", href: "/attendance-group/arte", initial: "A", current: false },
+  { id: 2, name: "Literatura", href: "/attendance-group/literatura", initial: "L", current: false },
 ];
 
 export const Sidebar = () => {
