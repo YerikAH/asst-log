@@ -1,5 +1,5 @@
 import { classNames } from "@/utils";
-import { Cog6ToothIcon } from "@heroicons/react/24/outline";
+import { ArrowLeftEndOnRectangleIcon, Cog6ToothIcon } from "@heroicons/react/24/outline";
 import logo from "@/assets/logo-icon-white.png";
 import { Link, useLocation, useNavigation } from "react-router-dom";
 
@@ -63,7 +63,7 @@ export const SidebarDesktop = ({ navigation, codes }: Props) => {
                     <Link
                       to={code.href}
                       className={classNames(
-                        code.current
+                        code.href === location.pathname
                           ? "bg-zinc-800 text-white"
                           : "text-gray-400 hover:bg-zinc-800 hover:text-white",
                         "group flex gap-x-3 rounded-full py-3 px-4 text-sm font-semibold leading-6 font-lexend"
@@ -83,11 +83,11 @@ export const SidebarDesktop = ({ navigation, codes }: Props) => {
                 href="#"
                 className="group -mx-2 flex gap-x-3 rounded-full py-3 px-4 text-sm font-semibold leading-6 text-gray-400 hover:bg-zinc-800 hover:text-white font-lexend"
               >
-                <Cog6ToothIcon
+                <ArrowLeftEndOnRectangleIcon
                   aria-hidden="true"
                   className="h-6 w-6 shrink-0"
                 />
-                Settings
+                Cerrar sesión
               </a>
             </li>
           </ul>

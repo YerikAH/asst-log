@@ -17,7 +17,7 @@ function Register() {
   return (
     <main className="bg-slate-100 h-screen overflow-auto">
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 items-center">
-        <div className=" py-24 rounded-3xl w-full max-w-[500px] bg-white">
+        <div className=" py-24 px-8 rounded-3xl w-full max-w-[500px] bg-white">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm ">
             <img className="h-12 mx-auto" src={logo} alt="Your Company" />
             <h2 className="mt-12 font-lexend text-left text-2xl font-bold leading-9 tracking-tight text-gray-900">

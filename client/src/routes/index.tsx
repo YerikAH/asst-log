@@ -3,6 +3,7 @@ import {
   Attendance,
   AttendanceGroup,
   Dashboard,
+  Home,
   Login,
   NotFound,
   Register,
@@ -22,6 +23,10 @@ const router = [
   {
     element: <NotFound />,
     path: "*",
+  },
+  {
+    element: <Home />,
+    path: "/",
   },
   {
     element: <Sidebar />,

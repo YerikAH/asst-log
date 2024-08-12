@@ -5,3 +5,4 @@ export { default as Dashboard } from "./dashboard";
 export { default as AttendanceGroup } from "./attendance-group";
 export { default as Attendance } from "./attendance-group/attendance";
 export { default as Settings } from "./settings";
+export { default as Home } from "./home";
