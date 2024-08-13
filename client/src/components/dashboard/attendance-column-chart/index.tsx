@@ -120,8 +120,6 @@ export const AttendanceColumnChart = () => {
       );
       chart.render();
     }
-
-    window.dispatchEvent(new Event("resize"));
   }, []);
 
   return (

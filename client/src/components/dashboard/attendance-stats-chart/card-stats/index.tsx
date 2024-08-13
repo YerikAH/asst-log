@@ -82,19 +82,6 @@ export const CardStats = ({ chartId, label, value }: Props) => {
       const chart = new ApexCharts(document.getElementById(chartId), options);
       chart.render();
     }
-
-    window.dispatchEvent(new Event("resize"));
-    return () => {
-      if (
-        document.getElementById(chartId) &&
-        typeof ApexCharts !== "undefined"
-      ) {
-        const chart = ApexCharts.getChartByID(chartId);
-        if (chart) {
-          chart.destroy();
-        }
-      }
-    };
   }, []);
   return (
     <div className="w-full">

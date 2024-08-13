@@ -86,7 +86,7 @@ const people = [
 ];
 export const RankingAttendance = () => {
   return (
-    <div className="px-4 sm:px-6 lg:px-8 bg-white rounded-3xl py-8 mt-4">
+    <div className="px-4 sm:px-6 lg:px-8 bg-white rounded-3xl py-8 mt-4 mb-10">
       <h2 className="text-base font-semibold font-lexend text-gray-900">
         Ranking de asistencias
       </h2>

@@ -1,7 +1,6 @@
 import { useTitle } from "@/hook";
 import { useTitleStore } from "@/services/config";
 import { useEffect } from "react";
-import { UserCircleIcon } from "@heroicons/react/24/solid";
 
 function Settings() {
   const { changeTitle } = useTitle();

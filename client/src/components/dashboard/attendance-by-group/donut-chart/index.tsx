@@ -106,8 +106,6 @@ export const DonutChart = () => {
       );
       chart.render();
     }
-
-    window.dispatchEvent(new Event("resize"));
   }, []);
 
   return (
