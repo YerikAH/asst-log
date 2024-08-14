@@ -1,6 +1,6 @@
 export const Hero = () => {
   return (
-    <section className="mx-auto max-w-5xl grid place-items-center mt-32 px-4 lg:px-6  ">
+    <section className="mx-auto max-w-5xl grid place-items-center mt-32 px-6 lg:px-8  ">
       <h1 className="mx-auto font-lexend text-center max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
         Accounting{" "}
         <span className="relative whitespace-nowrap text-blue-600">
@@ -20,6 +20,11 @@ export const Hero = () => {
         Most bookkeeping software is accurate, but hard to use. We make the
         opposite trade-off, and hope you don’t get audited.
       </p>
+
+      <div className="w-full flex justify-center mt-10 items-center">
+        <button className="bg-zinc-900 font-lexend text-white text-sm px-8 py-4 rounded-full">Comienza ahora</button>
+        <button className="bg-white text-gray-900 text-sm px-8 py-4 ml-4 border rounded-full font-lexend">Descargar PlayStore</button>
+      </div>
     </section>
   );
 };
