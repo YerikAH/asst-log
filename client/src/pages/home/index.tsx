@@ -1,4 +1,11 @@
-import { Footer, Hero, Navigation, Feature, Qa } from "@/components/home";
+import {
+  Footer,
+  Hero,
+  Navigation,
+  Feature,
+  Qa,
+  CallToAction,
+} from "@/components/home";
 import { useTitle } from "@/hook";
 import { useEffect } from "react";
 
@@ -12,8 +19,9 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
-        <Feature/>
-        <Qa/>
+        <Feature />
+        <CallToAction />
+        <Qa />
       </main>
       <Footer />
     </>
