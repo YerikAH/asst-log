@@ -39,8 +39,11 @@ function AttendanceGroup() {
           total={30}
           value={14}
         />
-        <button className="bg-transparent border-slate-300  border-2 rounded-3xl p-5 size-48 flex justify-center items-center">
-          <PlusIcon className="text-slate-300 size-6" strokeWidth={3} />
+        <button className="bg-transparent border-slate-300  border-2 rounded-3xl p-5 size-48 transition-all flex justify-center items-center hover:bg-slate-200 hover:border-slate-200 group hover:scale-105 ">
+          <PlusIcon
+            className="text-slate-300 size-6 group-hover:text-slate-500 transition-colors"
+            strokeWidth={3}
+          />
         </button>
       </div>
       <Outlet />

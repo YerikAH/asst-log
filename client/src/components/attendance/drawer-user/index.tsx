@@ -8,6 +8,48 @@ import {
 } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { EllipsisVerticalIcon } from "@heroicons/react/20/solid";
+import Calendar from "react-github-contribution-calendar";
+import { Scrollbars } from "react-custom-scrollbars-2";
+
+const values = {
+  "2024-06-23": 1,
+  "2024-01-01": 5,
+  "2024-06-26": 2,
+  "2024-06-27": 3,
+  "2024-06-28": 4,
+  "2024-06-29": 4,
+};
+const until = "2024-12-31";
+const panelAttributes = { rx: 3, ry: 3 };
+const weekLabelAttributes = {
+  "font-family": "Lexend",
+  "font-weight": "500",
+  "font-size": 11,
+};
+const monthLabelAttributes = {
+  style: {
+    "font-size": 11,
+    "font-family": "Lexend",
+    "alignment-baseline": "central",
+    fill: "#AAA",
+    "font-weight": "500",
+  },
+};
+const weekNames = ["", "L", "", "M", "", "V", ""];
+const monthNames = [
+  "Ene",
+  "Feb",
+  "Mar",
+  "Abr",
+  "May",
+  "Jun",
+  "Jul",
+  "Ago",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dic",
+];
 
 interface Props {
   open: boolean;
@@ -48,8 +90,14 @@ export const DrawerUser = ({ open, setOpen }: Props) => {
                     </div>
                   </div>
                 </div>
-                {/* Main */}
                 <div>
+                  <div>
+                    <img
+                      src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg"
+                      className="w-full h-40 object-cover"
+                      alt="avatar"
+                    />
+                  </div>
                   <div className="pb-1 sm:pb-6">
                     <div>
                       <div className="mt-6 px-4 sm:mt-8 sm:flex sm:items-end sm:px-6">
@@ -70,6 +118,21 @@ export const DrawerUser = ({ open, setOpen }: Props) => {
                         </div>
                       </div>
                     </div>
+                  </div>
+                  <div className="px-4 mb-5 overflow-hidden">
+                    <Scrollbars style={{ width: "100%", height: 120 }} autoHide>
+                      <div className="w-[720px]">
+                        <Calendar
+                          values={values}
+                          until={until}
+                          panelAttributes={panelAttributes}
+                          weekLabelAttributes={weekLabelAttributes}
+                          monthLabelAttributes={monthLabelAttributes}
+                          weekNames={weekNames}
+                          monthNames={monthNames}
+                        />
+                      </div>
+                    </Scrollbars>
                   </div>
                   <div className="px-4 pb-5 pt-5 sm:px-0 sm:pt-0">
                     <dl className="space-y-8 px-4 sm:space-y-6 sm:px-6">
@@ -99,6 +162,7 @@ export const DrawerUser = ({ open, setOpen }: Props) => {
                       </div>
                     </dl>
                   </div>
+
                   <div className="mt-5 flex flex-wrap space-y-3 sm:space-x-3 sm:space-y-0 px-4">
                     <button
                       type="button"

@@ -11,10 +11,10 @@ interface Props {
 
 export const CardCode = ({ name, value, total, color, icon: Icon }: Props) => {
   return (
-    <div className="bg-white rounded-3xl p-5 size-48 flex justify-between flex-col">
-      <div className="flex justify-between items-start">
+    <button className="bg-white rounded-3xl p-5 size-48 flex justify-between flex-col  cursor-pointer  group hover:scale-105  transition-all">
+      <div className="flex justify-between items-start w-full h-full">
         <div
-          className="size-12 rounded-xl flex items-center justify-center bg-green-500"
+          className="size-12 rounded-xl flex items-center justify-center bg-green-500 group-hover:rotate-12 transition-all"
           style={{ backgroundColor: color }}
         >
           <Icon className="size-8 text-white" />
@@ -25,10 +25,10 @@ export const CardCode = ({ name, value, total, color, icon: Icon }: Props) => {
           <p className="text-xs font-lexend text-gray-500">{total}</p>
         </span>
       </div>
-      <div className="mt-4">
+      <div className="mt-4 w-full">
         <div className="flex justify-between items-center">
           <div>
-            <p className="text-gray-900 font-medium font-lexend text-sm">
+            <p className="text-gray-900 font-medium font-lexend text-sm text-left">
               {name}
             </p>
             <span className="font-lexend text-xs text-gray-500">
@@ -47,6 +47,6 @@ export const CardCode = ({ name, value, total, color, icon: Icon }: Props) => {
           </div>
         </div>
       </div>
-    </div>
+    </button>
   );
 };

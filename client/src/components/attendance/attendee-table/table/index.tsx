@@ -279,15 +279,15 @@ export const Table = () => {
               <div className="absolute left-14 top-0 flex h-12 items-center space-x-3 bg-white sm:left-12">
                 <button
                   type="button"
-                  className="inline-flex items-center rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-white"
+                  className="inline-flex items-center rounded-full bg-white font-lexend px-4 py-2 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-white"
                 >
-                  Bulk edit
+                  Faltan todos
                 </button>
                 <button
                   type="button"
-                  className="inline-flex items-center rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-white"
+                  className="inline-flex items-center rounded-full bg-white px-4 py-2 font-lexend text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-white"
                 >
-                  Delete all
+                  Asistidos todos
                 </button>
               </div>
             )}

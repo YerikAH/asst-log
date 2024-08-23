@@ -1,6 +1,5 @@
 import logo from "@/assets/logo.png";
 import google from "@/assets/icon/google.png";
-import github from "@/assets/icon/github.png";
 import { useTitle, useModalWarning } from "@/hook";
 import { useEffect, useState } from "react";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/20/solid";
@@ -133,13 +132,6 @@ function Login() {
                   >
                     <img alt="google" src={google} className="size-5" />
                     <span>Google</span>
-                  </button>
-                  <button
-                    type="submit"
-                    className="flex w-full items-center gap-2 mt-4 font-lexend justify-center rounded-full bg-white px-3 py-3 text-sm font-semibold leading-6 border border-gray-200 text-gray-900  shadow-sm hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
-                  >
-                    <img alt="github" src={github} className="size-5" />
-                    <span>GitHub</span>
                   </button>
                 </div>
               </div>
