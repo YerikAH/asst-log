@@ -11,6 +11,8 @@ import { useEffect } from "react";
 
 export default function Home() {
   const { changeTitle } = useTitle();
+
+  // un cambio
   useEffect(() => {
     changeTitle("Inicio - AsstLog");
   }, [changeTitle]);
