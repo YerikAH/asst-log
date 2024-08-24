@@ -1,9 +1,18 @@
 import { useState } from "react";
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
-import { PaintBrushIcon } from "@heroicons/react/20/solid";
+import {
+  ClipboardDocumentCheckIcon,
+  ClockIcon,
+  FaceSmileIcon,
+  KeyIcon,
+  MapPinIcon,
+  PaintBrushIcon,
+  QrCodeIcon,
+} from "@heroicons/react/20/solid";
 import { Radio, RadioGroup } from "@headlessui/react";
 import { classNames } from "@/utils";
-import { Swatches } from "react-color";
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import { PlusIcon } from "@heroicons/react/24/outline";
 
 const options = [
   { name: "Pink", color: "text-red-500" },
@@ -27,7 +36,7 @@ export const CreateGroupModal = () => {
         <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
           <DialogPanel
             transition
-            className="relative transform overflow-hidden rounded-3xl bg-white px-4 pb-4 pt-5 text-left shadow transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 sm:w-full sm:max-w-xl sm:p-6 data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95 "
+            className="relative transform  rounded-3xl bg-white px-4 pb-4 pt-5 text-left shadow transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 sm:w-full sm:max-w-xl sm:p-6 data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95 "
           >
             <div>
               <div className="grid grid-cols-[auto_auto] items-start justify-start gap-4">
@@ -94,17 +103,120 @@ export const CreateGroupModal = () => {
                               />
                             </Radio>
                           ))}
+                          <div className="flex items-center gap-2 relative">
+                            <Radio
+                              value=""
+                              aria-label=""
+                              className={classNames(
+                                "relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 ring-current focus:outline-none data-[checked]:ring-2 data-[focus]:data-[checked]:ring data-[focus]:data-[checked]:ring-offset-1 text-blue-500"
+                              )}
+                            >
+                              <span className="border size-8 bg-white rounded-full"></span>
+                            </Radio>
+                            <p className="font-lexend text-sm">Color</p>
+                            <input
+                              type="text"
+                              value="#FFF555"
+                              className="block px-6 w-full outline-none rounded-full border-0 py-3 text-gray-500 font-lexend shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+                            />
+                            <div className="absolute top-14 rounded-2xl overflow-hidden border  ">
+                              {/* <SwatchesPicker /> */}
+                            </div>
+                          </div>
                         </RadioGroup>
-                        <div className="flex items-center gap-2">
-                          <p className="font-lexend text-sm">Color</p>
-                          <input
-                            type="text"
-                            value="#FFF555"
-                            className="block px-6 w-full outline-none rounded-full border-0 py-3 text-gray-500 font-lexend shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
-                          />
-                        </div>
                       </div>
                     </fieldset>
+                  </div>
+                  <div className="py-4">
+                    <label
+                      htmlFor="group"
+                      className="block text-sm font-medium leading-6 text-gray-900 font-lexend"
+                    >
+                      Ingresa el registro de asistencia:
+                    </label>
+                    <div className="mt-2">
+                      <Menu
+                        as="div"
+                        className="relative inline-block text-left"
+                      >
+                        <div>
+                          <MenuButton className="flex size-12 justify-center  rounded-lg bg-white items-center  hover:bg-gray-50 border border-slate-300">
+                            <PlusIcon
+                              aria-hidden="true"
+                              className=" h-5 w-5 text-slate-300"
+                            />
+                          </MenuButton>
+                        </div>
+
+                        <MenuItems
+                          transition
+                          className="absolute z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+                        >
+                          <div className="py-1">
+                            <MenuItem>
+                              <div className="flex items-center gap-2 px-4 py-2 bg-white hover:bg-gray-50 cursor-pointer">
+                                <span className="size-8 bg-sky-100 justify-center items-center rounded-lg flex">
+                                  <QrCodeIcon className="size-5 text-sky-500" />
+                                </span>
+                                <h2 className="text-sm font-lexend text-gray-800">
+                                  Escanear código QR
+                                </h2>
+                              </div>
+                            </MenuItem>
+                            <MenuItem>
+                              <div className="flex items-center gap-2 px-4 py-2 bg-white hover:bg-gray-50 cursor-pointer">
+                                <span className="size-8 bg-purple-100 justify-center items-center rounded-lg flex">
+                                  <KeyIcon className="size-5 text-purple-500" />
+                                </span>
+                                <h2 className="text-sm font-lexend text-gray-800">
+                                  Patrón de desbloqueo
+                                </h2>
+                              </div>
+                            </MenuItem>
+                            <MenuItem>
+                              <div className="flex items-center gap-2 px-4 py-2 bg-white hover:bg-gray-50 cursor-pointer">
+                                <span className="size-8 bg-indigo-100 justify-center items-center rounded-lg flex">
+                                  <ClipboardDocumentCheckIcon className="size-5 text-indigo-500" />
+                                </span>
+                                <h2 className="text-sm font-lexend text-gray-800">
+                                  Confirmar asistencia
+                                </h2>
+                              </div>
+                            </MenuItem>
+                            <MenuItem>
+                              <div className="flex items-center gap-2 px-4 py-2 bg-white hover:bg-gray-50 cursor-pointer">
+                                <span className="size-8 bg-blue-100 justify-center items-center rounded-lg flex">
+                                  <MapPinIcon className="size-5 text-blue-500" />
+                                </span>
+                                <h2 className="text-sm font-lexend text-gray-800">
+                                  Geolocalización
+                                </h2>
+                              </div>
+                            </MenuItem>
+                            <MenuItem>
+                              <div className="flex items-center gap-2 px-4 py-2 bg-white hover:bg-gray-50 cursor-pointer">
+                                <span className="size-8 bg-pink-100 justify-center items-center rounded-lg flex">
+                                  <FaceSmileIcon className="size-5 text-pink-500" />
+                                </span>
+                                <h2 className="text-sm font-lexend text-gray-800">
+                                  Reconocimiento facial
+                                </h2>
+                              </div>
+                            </MenuItem>
+                            <MenuItem>
+                              <div className="flex items-center gap-2 px-4 py-2 bg-white hover:bg-gray-50 cursor-pointer">
+                                <span className="size-8 bg-emerald-100 justify-center items-center rounded-lg flex">
+                                  <ClockIcon className="size-5 text-emerald-500" />
+                                </span>
+                                <h2 className="text-sm font-lexend text-gray-800">
+                                  Automatico
+                                </h2>
+                              </div>
+                            </MenuItem>
+                          </div>
+                        </MenuItems>
+                      </Menu>
+                    </div>
                   </div>
                   <p className="text-sm text-gray-500">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
