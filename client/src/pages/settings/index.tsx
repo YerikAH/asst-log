@@ -1,5 +1,6 @@
 import { useTitle } from "@/hook";
 import { useTitleStore } from "@/services/config";
+import { UserCircleIcon } from "@heroicons/react/20/solid";
 import { useEffect } from "react";
 
 function Settings() {
@@ -122,6 +123,26 @@ function Settings() {
                       placeholder="Ej. email@gmail.com"
                       className="block w-full rounded-full border-0 py-2 px-6 font-lexend text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
+                  </div>
+                </div>
+                <div className="mt-4">
+                  <label
+                    htmlFor="photo"
+                    className="block text-sm font-medium leading-6 text-gray-900 font-lexend"
+                  >
+                    Photo
+                  </label>
+                  <div className="mt-2 flex items-center gap-x-3">
+                    <UserCircleIcon
+                      aria-hidden="true"
+                      className="h-12 w-12 text-gray-300"
+                    />
+                    <button
+                      type="button"
+                      className="rounded-full bg-white px-2.5 py-1.5 text-sm font-semibold font-lexend text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                    >
+                      Change
+                    </button>
                   </div>
                 </div>
               </div>

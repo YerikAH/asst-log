@@ -1,5 +1,6 @@
 import { UsersIcon } from "@heroicons/react/20/solid";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
+import { Link } from "react-router-dom";
 
 interface Props {
   name: string;
@@ -7,11 +8,22 @@ interface Props {
   total: number;
   color: string;
   icon: React.ElementType;
+  href: string;
 }
 
-export const CardCode = ({ name, value, total, color, icon: Icon }: Props) => {
+export const CardCode = ({
+  name,
+  value,
+  total,
+  color,
+  icon: Icon,
+  href,
+}: Props) => {
   return (
-    <button className="bg-white rounded-3xl p-5 size-48 flex justify-between flex-col  cursor-pointer  group hover:scale-105  transition-all">
+    <Link
+      to={href}
+      className="bg-white rounded-3xl p-5 size-48 flex justify-between flex-col  cursor-pointer  group hover:scale-105  transition-all"
+    >
       <div className="flex justify-between items-start w-full h-full">
         <div
           className="size-12 rounded-xl flex items-center justify-center bg-green-500 group-hover:rotate-12 transition-all"
@@ -47,6 +59,6 @@ export const CardCode = ({ name, value, total, color, icon: Icon }: Props) => {
           </div>
         </div>
       </div>
-    </button>
+    </Link>
   );
 };

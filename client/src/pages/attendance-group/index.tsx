@@ -1,4 +1,4 @@
-import { CardCode } from "@/components/attendance-group";
+import { CardCode, CreateGroupModal } from "@/components/attendance-group";
 import { useTitle } from "@/hook";
 import { useTitleStore } from "@/services/config";
 import { BookOpenIcon, PencilIcon } from "@heroicons/react/20/solid";
@@ -31,6 +31,7 @@ function AttendanceGroup() {
           name="Arte"
           total={20}
           value={15}
+          href="arte"
         />
         <CardCode
           color="#0ea5e9"
@@ -38,6 +39,7 @@ function AttendanceGroup() {
           name="Literatura"
           total={30}
           value={14}
+          href="literatura"
         />
         <button className="bg-transparent border-slate-300  border-2 rounded-3xl p-5 size-48 transition-all flex justify-center items-center hover:bg-slate-200 hover:border-slate-200 group hover:scale-105 ">
           <PlusIcon
@@ -46,6 +48,7 @@ function AttendanceGroup() {
           />
         </button>
       </div>
+      <CreateGroupModal />
       <Outlet />
     </div>
   );
