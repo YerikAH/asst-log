@@ -33,7 +33,10 @@ export const CreateGroupModal = () => {
           >
             <div>
               <div className="flex  justify-end">
-                <button className="justify-center items-center flex size-8 rounded-full bg-white hover:bg-gray-100">
+                <button
+                  className="justify-center items-center flex size-8 rounded-full bg-white hover:bg-gray-100"
+                  onClick={() => setOpen(!open)}
+                >
                   <XMarkIcon className="size-5 text-gray-500" />
                 </button>
               </div>
