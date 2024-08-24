@@ -3,6 +3,7 @@ import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { PaintBrushIcon } from "@heroicons/react/20/solid";
 import { Radio, RadioGroup } from "@headlessui/react";
 import { classNames } from "@/utils";
+import { Swatches } from "react-color";
 
 const options = [
   { name: "Pink", color: "text-red-500" },
