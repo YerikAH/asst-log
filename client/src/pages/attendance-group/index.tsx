@@ -3,11 +3,12 @@ import { useTitle } from "@/hook";
 import { useTitleStore } from "@/services/config";
 import { BookOpenIcon, PencilIcon } from "@heroicons/react/20/solid";
 import { PlusIcon } from "@heroicons/react/24/outline";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 
 function AttendanceGroup() {
   const { changeTitle } = useTitle();
+  const [open, setOpen] = useState(false);
   const changeTitleNavigation = useTitleStore((state) => state.changeTitle);
 
   useEffect(() => {
@@ -41,14 +42,17 @@ function AttendanceGroup() {
           value={14}
           href="literatura"
         />
-        <button className="bg-transparent border-slate-300  border-2 rounded-3xl p-5 size-48 transition-all flex justify-center items-center hover:bg-slate-200 hover:border-slate-200 group hover:scale-105 ">
+        <button
+          className="bg-transparent border-slate-300  border-2 rounded-3xl p-5 size-48 transition-all flex justify-center items-center hover:bg-slate-200 hover:border-slate-200 group hover:scale-105 "
+          onClick={() => setOpen(!open)}
+        >
           <PlusIcon
             className="text-slate-300 size-6 group-hover:text-slate-500 transition-colors"
             strokeWidth={3}
           />
         </button>
       </div>
-      <CreateGroupModal />
+      <CreateGroupModal open={open} setOpen={setOpen} />
       <Outlet />
     </div>
   );

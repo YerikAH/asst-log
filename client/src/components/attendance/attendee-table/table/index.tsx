@@ -281,13 +281,13 @@ export const Table = () => {
                   type="button"
                   className="inline-flex items-center rounded-full bg-white font-lexend px-4 py-2 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-white"
                 >
-                  Faltan todos
+                  Falta
                 </button>
                 <button
                   type="button"
                   className="inline-flex items-center rounded-full bg-white px-4 py-2 font-lexend text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-white"
                 >
-                  Asistidos todos
+                  Asistidos
                 </button>
               </div>
             )}
