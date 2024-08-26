@@ -1,7 +1,7 @@
 import { classNames } from "@/utils";
-import { ArrowLeftEndOnRectangleIcon, Cog6ToothIcon } from "@heroicons/react/24/outline";
+import { ArrowLeftEndOnRectangleIcon } from "@heroicons/react/24/outline";
 import logo from "@/assets/logo-icon-white.png";
-import { Link, useLocation, useNavigation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 interface Props {
   navigation: {
@@ -20,7 +20,7 @@ interface Props {
 }
 
 export const SidebarDesktop = ({ navigation, codes }: Props) => {
-  const location = useLocation()
+  const location = useLocation();
 
   return (
     <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
@@ -55,7 +55,7 @@ export const SidebarDesktop = ({ navigation, codes }: Props) => {
             </li>
             <li>
               <div className="text-xs font-semibold leading-6 text-gray-400 font-lexend">
-                Tus códigos
+                Tus asistencias
               </div>
               <ul role="list" className="-mx-2 mt-2 space-y-1">
                 {codes.map((code) => (
