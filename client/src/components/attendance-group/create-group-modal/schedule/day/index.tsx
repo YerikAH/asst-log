@@ -60,8 +60,8 @@ export const Day = () => {
             </div>
           </div>
 
-          <button>
-            <TrashIcon className="size-5 text-gray-500" />
+          <button className="bg-white hover:bg-zinc-100 rounded-full p-1 transition-all group">
+            <TrashIcon className="size-5 text-zinc-500 group-hover:text-zinc-700" />
           </button>
         </div>
       </div>

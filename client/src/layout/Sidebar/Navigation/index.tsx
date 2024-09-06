@@ -40,7 +40,7 @@ export const Navigation = ({ setSidebarOpen }: Props) => {
               name="search"
               type="search"
               placeholder="Buscar..."
-              className="block bg-slate-100 rounded-full py-4 border-0 pr-4 pl-12 outline-none text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm font-lexend"
+              className="block bg-white shadow-sm border-zinc-200 rounded-full py-3 pr-4 pl-12 outline-none text-gray-900 placeholder:text-gray-400 focus:ring-1 sm:text-sm font-lexend"
             />
           </form>
           <div
