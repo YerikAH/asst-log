@@ -37,10 +37,10 @@ export const CreateGroupModal = ({ open, setOpen }: Props) => {
             <div>
               <div className="flex  justify-end">
                 <button
-                  className="justify-center items-center flex size-8 rounded-full bg-white hover:bg-gray-100"
+                  className="justify-center items-center flex p-2 rounded-full bg-white hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 "
                   onClick={() => setOpen(!open)}
                 >
-                  <XMarkIcon className="size-5 text-gray-500" />
+                  <XMarkIcon className="size-6 text-gray-500" />
                 </button>
               </div>
 

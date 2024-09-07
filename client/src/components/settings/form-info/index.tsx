@@ -27,7 +27,7 @@ export const FormInfo = () => {
                 type="text"
                 placeholder="janesmith"
                 autoComplete="bussiness"
-                className="flex-1 border-0 bg-transparent py-2 px-6 text-gray-900 placeholder:text-gray-400 sm:text-sm sm:leading-6 font-lexend flex rounded-full shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-inset focus:ring-indigo-600 focus:ring-2 w-full"
+                className="flex-1 border-0 bg-transparent py-2 px-6 text-gray-900 placeholder:text-gray-400 sm:text-sm sm:leading-6 font-lexend flex rounded-full shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-inset focus:ring-blue-600 focus:ring-2 w-full"
               />
             </div>
           </div>
@@ -44,7 +44,7 @@ export const FormInfo = () => {
                 id="about"
                 name="about"
                 rows={4}
-                className="block w-full px-6 rounded-xl border-0 py-2 resize-none text-gray-900 shadow-sm font-lexend ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full px-6 rounded-xl border-0 py-2 resize-none text-gray-900 shadow-sm font-lexend ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
                 defaultValue={""}
                 placeholder="Write a few sentences about yourself."
               />
@@ -70,7 +70,7 @@ export const FormInfo = () => {
                   type="text"
                   placeholder="Ej. Juan"
                   autoComplete="given-name"
-                  className="block w-full rounded-full border-0 px-6 py-2 font-lexend text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-full border-0 px-6 py-2 font-lexend text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -89,7 +89,7 @@ export const FormInfo = () => {
                   placeholder="Ej. Sanchez"
                   type="text"
                   autoComplete="family-name"
-                  className="block w-full rounded-full border-0 py-2 px-6 font-lexend text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-full border-0 py-2 px-6 font-lexend text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -108,7 +108,7 @@ export const FormInfo = () => {
                 type="email"
                 autoComplete="email"
                 placeholder="Ej. email@gmail.com"
-                className="block w-full rounded-full border-0 py-2 px-6 font-lexend text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-full border-0 py-2 px-6 font-lexend text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -138,7 +138,7 @@ export const FormInfo = () => {
       <div className="flex justify-end items-center mt-8">
         <button
           type="submit"
-          className="rounded-full bg-indigo-500 px-6 font-lexend py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+          className="rounded-full bg-blue-500 px-6 font-lexend py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
         >
           Guardar cambios
         </button>

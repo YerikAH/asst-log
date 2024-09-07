@@ -110,7 +110,7 @@ export const DonutChart = () => {
 
   return (
     <div className="px-2">
-      <div id="donut-chart"></div>;
+      <div id="donut-chart"></div>
     </div>
   );
 };

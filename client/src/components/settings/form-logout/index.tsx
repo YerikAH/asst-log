@@ -27,7 +27,7 @@ export const FormLogout = () => {
                 placeholder="Ej. FAWGba235!#%$"
                 type="password"
                 autoComplete="current-password"
-                className="block w-full rounded-full border-0 bg-white py-2 px-6 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 font-lexend focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                className="block w-full rounded-full border-0 bg-white py-2 px-6 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 font-lexend focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -36,7 +36,7 @@ export const FormLogout = () => {
         <div className="mt-8 flex">
           <button
             type="submit"
-            className="rounded-full bg-indigo-500 px-6 font-lexend py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+            className="rounded-full bg-blue-500 px-6 font-lexend py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
           >
             Log out other sessions
           </button>

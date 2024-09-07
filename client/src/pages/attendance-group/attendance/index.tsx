@@ -18,10 +18,10 @@ function Attendance() {
       <div className="w-full max-w-5xl mx-auto px-6 pt-16">
         <div className="flex items-center justify-end mb-8">
           <button
-            className="rounded-full p-1 hover:bg-gray-100 bg-white transition-colors"
+            className="rounded-full p-2 hover:bg-gray-100 bg-white transition-all focus:ring-2 focus:ring-blue-500"
             onClick={closeDrawer}
           >
-            <XMarkIcon className="size-5 text-gray-500" />
+            <XMarkIcon className="size-6 text-gray-500" />
           </button>
         </div>
         <HeaderAttendance />

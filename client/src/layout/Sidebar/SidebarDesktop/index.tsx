@@ -8,6 +8,7 @@ interface Props {
     name: string;
     href: string;
     icon: React.ElementType;
+    iconActive: React.ElementType;
     current: boolean;
   }[];
   codes: {
@@ -25,7 +26,7 @@ export const SidebarDesktop = ({ navigation, codes }: Props) => {
   return (
     <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
       <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white ">
-        <div className="flex h-20 shrink-0 items-center border-b border-b-zinc-200 px-6">
+        <div className="flex h-20 shrink-0 items-center  px-6">
           <img alt="AsstLog" src={logo} className="h-10 w-auto" />
         </div>
         <nav className="flex flex-1 flex-col px-6 pb-4">
@@ -43,10 +44,18 @@ export const SidebarDesktop = ({ navigation, codes }: Props) => {
                         "group flex gap-x-3 rounded-xl py-3 px-4 text-sm font-semibold leading-6 font-lexend transition-all"
                       )}
                     >
-                      <item.icon
-                        aria-hidden="true"
-                        className="h-6 w-6 shrink-0 "
-                      />
+                      {location.pathname === item.href ? (
+                        <item.iconActive
+                          aria-hidden="true"
+                          className="h-6 w-6 shrink-0"
+                        />
+                      ) : (
+                        <item.icon
+                          aria-hidden="true"
+                          className="h-6 w-6 shrink-0"
+                        />
+                      )}
+
                       {item.name}
                     </Link>
                   </li>

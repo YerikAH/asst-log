@@ -1,6 +1,5 @@
 import { CardCode, CreateGroupModal } from "@/components/attendance-group";
 import { useTitle } from "@/hook";
-import { useTitleStore } from "@/services/config";
 import { BookOpenIcon, PencilIcon } from "@heroicons/react/20/solid";
 import { PlusIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
@@ -9,12 +8,10 @@ import { Outlet } from "react-router-dom";
 function AttendanceGroup() {
   const { changeTitle } = useTitle();
   const [open, setOpen] = useState(false);
-  const changeTitleNavigation = useTitleStore((state) => state.changeTitle);
 
   useEffect(() => {
-    changeTitle("Registro de asistencias 🗃️ - AsstLog");
-    changeTitleNavigation("Registro de asistencias 🗃️");
-  }, [changeTitle, changeTitleNavigation]);
+    changeTitle("Registro de asistencias - AsstLog");
+  }, [changeTitle]);
   return (
     <div className="max-w-5xl w-full mx-auto">
       <div className="flex items-center justify-start gap-4">

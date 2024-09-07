@@ -123,7 +123,7 @@ export const AttendanceColumnChart = () => {
   }, []);
 
   return (
-    <div className="px-4 py-6 rounded-3xl bg-white w-full h-[400px]">
+    <div className="px-4 py-6 rounded-3xl bg-white w-full lg:h-[400px]">
       <FilterByDate />
       <div id="bar-chart"></div>
     </div>

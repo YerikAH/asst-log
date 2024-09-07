@@ -27,7 +27,7 @@ export const FormChangePassword = () => {
                   type="password"
                   autoComplete="current-password"
                   placeholder="Ej. GBA22aca$"
-                  className="block w-full rounded-full border-0 font-lexend bg-white py-2 px-6 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-full border-0 font-lexend bg-white py-2 px-6 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -46,7 +46,7 @@ export const FormChangePassword = () => {
                   type="password"
                   autoComplete="new-password"
                   placeholder="Ej. FAWGba235!#%$"
-                  className="block w-full rounded-full border-0 font-lexend bg-white py-2 px-6 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-full border-0 font-lexend bg-white py-2 px-6 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -65,7 +65,7 @@ export const FormChangePassword = () => {
                   type="password"
                   autoComplete="new-password"
                   placeholder="Ej. FAWGba235!#%$"
-                  className="block w-full rounded-full font-lexend border-0 bg-white py-2 px-6 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-full font-lexend border-0 bg-white py-2 px-6 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -75,7 +75,7 @@ export const FormChangePassword = () => {
       <div className="flex justify-end items-center mt-8">
         <button
           type="submit"
-          className="rounded-full bg-indigo-500 px-6 font-lexend py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+          className="rounded-full bg-blue-500 px-6 font-lexend py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
         >
           Cambiar contraseña
         </button>
