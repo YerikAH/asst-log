@@ -13,6 +13,7 @@ import {
   Register,
   Users,
 } from "./collections";
+import swagger from "payload-swagger";
 
 export default buildConfig({
   admin: {
@@ -34,7 +35,7 @@ export default buildConfig({
   graphQL: {
     schemaOutputFile: path.resolve(__dirname, "generated-schema.graphql"),
   },
-  plugins: [payloadCloud()],
+  plugins: [payloadCloud(), swagger({})],
   db: mongooseAdapter({
     url: process.env.DATABASE_URI,
   }),

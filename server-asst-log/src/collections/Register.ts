@@ -6,6 +6,10 @@ export const Register: CollectionConfig = {
     plural: "Registros",
     singular: "Registro",
   },
+  access: {
+    read: () => true,
+    create: () => true,
+  },
   fields: [
     {
       name: "name",

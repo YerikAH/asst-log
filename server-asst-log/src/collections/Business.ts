@@ -10,6 +10,29 @@ const Business: CollectionConfig = {
     plural: "Empresas",
     singular: "Empresa",
   },
+  access: {
+    create: ({ req: { user } }) => !!user, // Solo usuarios autenticados pueden crear empresas
+    read: ({ req: { user } }) => {
+      if (user) {
+        return {
+          owner: {
+            equals: user.id, // Solo el creador puede leer su propia empresa
+          },
+        };
+      }
+      return false;
+    },
+    update: ({ req: { user } }) => {
+      if (user) {
+        return {
+          owner: {
+            equals: user.id, // Solo el creador puede actualizar su propia empresa
+          },
+        };
+      }
+      return false;
+    },
+  },
   fields: [
     {
       name: "name",

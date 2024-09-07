@@ -10,6 +10,30 @@ const Users: CollectionConfig = {
     plural: "Usuarios",
     singular: "Usuario",
   },
+  access: {
+    create: () => true,
+    update: ({ req: { user } }) => {
+      if (user) {
+        return {
+          id: {
+            equals: user.id,
+          },
+        };
+      }
+      return false;
+    },
+    delete: () => false,
+    read: ({ req: { user } }) => {
+      if (user) {
+        return {
+          id: {
+            equals: user.id,
+          },
+        };
+      }
+      return false;
+    },
+  },
   fields: [
     {
       name: "name",
