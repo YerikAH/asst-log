@@ -1,4 +1,4 @@
-import { classNames } from "@/utils";
+import { classNames, textToRoute } from "@/utils";
 import {
   Dialog,
   DialogBackdrop,
@@ -8,7 +8,6 @@ import {
 import logo from "@/assets/logo.png";
 import {
   ArrowLeftEndOnRectangleIcon,
-  Cog6ToothIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
@@ -111,7 +110,7 @@ export const SidebarMobile = ({
                     {codes.map((code) => (
                       <li key={code.name}>
                         <Link
-                          to={code.href}
+                          to={textToRoute(code.href)}
                           onClick={() => setSidebarOpen(false)}
                           className={classNames(
                             location.pathname === code.href

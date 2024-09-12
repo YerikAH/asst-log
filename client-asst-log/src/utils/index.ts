@@ -36,3 +36,7 @@ export function getFormattedDate() {
     dayName.charAt(0).toUpperCase() + dayName.slice(1)
   }, ${day} de ${month} del ${year}`;
 }
+
+export function textToRoute(text: string) {
+  return text.trim().replaceAll(" ", "-").toLowerCase();
+}

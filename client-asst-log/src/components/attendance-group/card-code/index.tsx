@@ -1,3 +1,4 @@
+import { textToRoute } from "@/utils";
 import { UsersIcon } from "@heroicons/react/20/solid";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import { Link } from "react-router-dom";
@@ -19,9 +20,10 @@ export const CardCode = ({
   icon: Icon,
   href,
 }: Props) => {
+  href.toLowerCase;
   return (
     <Link
-      to={href}
+      to={textToRoute(href)}
       className="bg-white rounded-3xl p-5 size-48 flex justify-between flex-col  cursor-pointer  group hover:scale-105  transition-all"
     >
       <div className="flex justify-between items-start w-full h-full">

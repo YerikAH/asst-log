@@ -1,4 +1,4 @@
-import { classNames } from "@/utils";
+import { classNames, textToRoute } from "@/utils";
 import { ArrowLeftEndOnRectangleIcon } from "@heroicons/react/24/outline";
 import logo from "@/assets/logo.png";
 import { Link, useLocation } from "react-router-dom";
@@ -70,7 +70,7 @@ export const SidebarDesktop = ({ navigation, codes }: Props) => {
                 {codes.map((code) => (
                   <li key={code.name}>
                     <Link
-                      to={code.href}
+                      to={textToRoute(code.href)}
                       className={classNames(
                         code.href === location.pathname
                           ? "bg-blue-100 text-blue-600"
