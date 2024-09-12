@@ -32,7 +32,7 @@ export const CreateGroupModal = ({ open, setOpen }: Props) => {
         <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
           <DialogPanel
             transition
-            className="relative transform  rounded-3xl bg-white px-4 pb-4 pt-5 text-left shadow transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 sm:w-full sm:max-w-xl sm:p-6 data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95 "
+            className="relative transform  rounded-3xl bg-white px-4 pb-4 pt-5 text-left shadow transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 sm:w-full sm:max-w-5xl sm:p-6 data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95 "
           >
             <div>
               <div className="flex  justify-end">
@@ -46,7 +46,7 @@ export const CreateGroupModal = ({ open, setOpen }: Props) => {
 
               <HeaderSection />
 
-              <div className="mt-3 sm:mt-5">
+              <div className="mt-3 sm:mt-5 grid lg:grid-cols-2 gap-12">
                 <div className="mt-2 divide-y">
                   <div className="py-4">
                     <label
@@ -83,6 +83,8 @@ export const CreateGroupModal = ({ open, setOpen }: Props) => {
                       <AttendanceMenu />
                     </div>
                   </div>
+                </div>
+                <div>
                   <Schedule />
                 </div>
               </div>
