@@ -28,7 +28,7 @@ export const CardAttendance = ({
     >
       <div className="flex justify-between items-start w-full h-full">
         <div
-          className="size-12 rounded-xl flex items-center justify-center bg-green-500 group-hover:rotate-12 transition-all"
+          className="size-12 rounded-xl flex items-center justify-center bg-green-500 transition-all"
           style={{ backgroundColor: color }}
         >
           <Icon className="size-8 text-white" />
