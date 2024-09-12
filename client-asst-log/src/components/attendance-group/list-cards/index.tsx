@@ -1,8 +1,6 @@
 import { BookOpenIcon, PencilIcon } from "@heroicons/react/24/solid";
 import { CardAttendance } from "./card-attendance";
-import { PlusIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
-import { CreateGroupModal } from "../create-group-modal";
+import { ButtonOpenModal } from "./button-open-modal";
 
 const data = [
   {
@@ -21,33 +19,19 @@ const data = [
   },
 ];
 
-export const ListCards = () => {
-  const [open, setOpen] = useState(false);
-  return (
-    <>
-      <div className="flex flex-wrap justify-start items-center mt-8 gap-4">
-        {data.map((item, idx) => (
-          <CardAttendance
-            color={item.color}
-            href={item.name}
-            icon={item.icon}
-            name={item.name}
-            total={item.total}
-            value={item.value}
-            key={idx}
-          />
-        ))}
-        <button
-          className="bg-transparent border-slate-300  border-2 rounded-3xl p-5 size-48 transition-all flex justify-center items-center hover:bg-slate-200 hover:border-slate-200 group hover:scale-105 "
-          onClick={() => setOpen(!open)}
-        >
-          <PlusIcon
-            className="text-slate-300 size-6 group-hover:text-slate-500 transition-colors"
-            strokeWidth={3}
-          />
-        </button>
-      </div>
-      <CreateGroupModal open={open} setOpen={setOpen} />
-    </>
-  );
-};
+export const ListCards = () => (
+  <div className="flex flex-wrap justify-start items-center mt-8 gap-4">
+    {data.map((item, idx) => (
+      <CardAttendance
+        color={item.color}
+        href={item.name}
+        icon={item.icon}
+        name={item.name}
+        total={item.total}
+        value={item.value}
+        key={idx}
+      />
+    ))}
+    <ButtonOpenModal />
+  </div>
+);
