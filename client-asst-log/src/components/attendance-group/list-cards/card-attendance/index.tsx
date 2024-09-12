@@ -12,7 +12,7 @@ interface Props {
   href: string;
 }
 
-export const CardCode = ({
+export const CardAttendance = ({
   name,
   value,
   total,
