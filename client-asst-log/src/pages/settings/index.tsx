@@ -15,7 +15,7 @@ function Settings() {
   }, [changeTitle]);
   return (
     <div className="max-w-5xl mx-auto">
-      <form className="h-full mb-12">
+      <form className="h-full">
         <FormInfo />
         <FormChangePassword />
         <FormLogout />

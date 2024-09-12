@@ -80,7 +80,7 @@ export const Sidebar = () => {
       <div className="lg:pl-72">
         <Navigation setSidebarOpen={setSidebarOpen} />
 
-        <main className="pt-10 pb-[5rem] bg-slate-50 h-screen overflow-auto w-full">
+        <main className="pt-10 pb-10 bg-slate-50 h-screen overflow-auto w-full">
           <div className="px-4 sm:px-6 lg:px-8">
             <Outlet />
           </div>
