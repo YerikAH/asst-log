@@ -3,6 +3,8 @@ import google from "@/assets/icon/google.png";
 import { useTitle } from "@/hook";
 import { useEffect, useState } from "react";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/16/solid";
+import { Link } from "react-router-dom";
+import { ROUTES } from "@/routes/routes";
 
 function Register() {
   const { changeTitle } = useTitle();
@@ -164,12 +166,12 @@ function Register() {
 
             <p className="mt-10 text-center text-sm text-gray-500 font-lexend">
               ¿Ya tienes una cuenta?{" "}
-              <a
-                href="#"
+              <Link
+                to={ROUTES.LOGIN}
                 className="font-semibold leading-6 underline text-blue-600 hover:text-blue-500 font-lexend"
               >
                 Ingresar
-              </a>
+              </Link>
             </p>
           </div>
         </div>

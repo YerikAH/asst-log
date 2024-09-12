@@ -10,45 +10,50 @@ import {
   Settings,
 } from "@/pages";
 import { Sidebar } from "@/layout";
+import { ROUTES } from "./routes";
 
 const router = [
   {
     element: <Login />,
-    path: "/login",
+    path: ROUTES.LOGIN,
   },
   {
     element: <Register />,
-    path: "/register",
+    path: ROUTES.REGISTER,
   },
   {
     element: <NotFound />,
-    path: "*",
+    path: ROUTES.NOT_FOUNT,
   },
   {
     element: <Home />,
-    path: "/",
+    path: ROUTES.HOME,
   },
   {
     element: <Sidebar />,
-    path: "/",
+    path: ROUTES.HOME,
     children: [
       {
         element: <Dashboard />,
-        path: "/dashboard",
+        path: ROUTES.DASHBOARD,
       },
       {
         element: <AttendanceGroup />,
-        path: "/attendance-group",
+        path: ROUTES.ATTENDANCE_GROUP,
         children: [
           {
             element: <Attendance />,
-            path: ":attendance",
+            path: ROUTES.ATTENDANCE,
           },
         ],
       },
       {
         element: <Settings />,
-        path: "/settings",
+        path: ROUTES.SETTINGS,
+      },
+      {
+        element: <Settings />,
+        path: ROUTES.USERS,
       },
     ],
   },

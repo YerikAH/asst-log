@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/20/solid";
 import { ModalWarning } from "@/components/shared";
 import { PropsModal } from "@/types";
+import { Link } from "react-router-dom";
+import { ROUTES } from "@/routes/routes";
 
 function Login() {
   const { changeTitle } = useTitle();
@@ -139,12 +141,12 @@ function Login() {
 
             <p className="mt-10 text-center text-sm text-gray-500 font-lexend">
               ¿Aún no tienes una cuenta?{" "}
-              <a
-                href="#"
+              <Link
+                to={ROUTES.REGISTER}
                 className="font-semibold underline leading-6 text-blue-600 hover:text-blue-500 font-lexend"
               >
                 Registrate
-              </a>
+              </Link>
             </p>
           </div>
         </div>

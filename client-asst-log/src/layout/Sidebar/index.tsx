@@ -16,32 +16,33 @@ import {
   UsersIcon as UsersIconActive,
   Cog6ToothIcon as Cog6ToothIconActive,
 } from "@heroicons/react/20/solid";
+import { ROUTES } from "@/routes/routes";
 
 const navigation = [
   {
     name: "Dashboard",
-    href: "/dashboard",
+    href: ROUTES.DASHBOARD,
     icon: HomeIcon,
     iconActive: HomeIconActive,
     current: true,
   },
   {
     name: "Asistencia",
-    href: "/attendance-group",
+    href: ROUTES.ATTENDANCE_GROUP,
     icon: ArchiveBoxArrowDownIcon,
     iconActive: ArchiveBoxArrowDownIconActive,
     current: false,
   },
   {
     name: "Usuarios",
-    href: "/users",
+    href: ROUTES.USERS,
     icon: UsersIcon,
     iconActive: UsersIconActive,
     current: false,
   },
   {
     name: "Configuración",
-    href: "/settings",
+    href: ROUTES.SETTINGS,
     icon: Cog6ToothIcon,
     iconActive: Cog6ToothIconActive,
     current: false,
@@ -50,16 +51,16 @@ const navigation = [
 const teams = [
   {
     id: 1,
-    name: "Arte",
-    href: "/attendance-group/arte",
-    initial: "A",
+    name: "Recursos humanos",
+    href: `${ROUTES.ATTENDANCE_GROUP}/recursos-humanos`,
+    initial: "R",
     current: false,
   },
   {
     id: 2,
-    name: "Literatura",
-    href: "/attendance-group/literatura",
-    initial: "L",
+    name: "Desarrolladores",
+    href: `${ROUTES.ATTENDANCE_GROUP}/desarrolladores`,
+    initial: "D",
     current: false,
   },
 ];
