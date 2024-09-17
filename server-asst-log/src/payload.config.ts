@@ -10,7 +10,7 @@ import {
   Business,
   HistoryAttendance,
   Media,
-  Register,
+  MethodAttendace,
   Users,
 } from "./collections";
 import swagger from "payload-swagger";
@@ -26,8 +26,8 @@ export default buildConfig({
     Media,
     Business,
     Attendance,
-    Register,
     HistoryAttendance,
+    MethodAttendace,
   ],
   typescript: {
     outputFile: path.resolve(__dirname, "payload-types.ts"),

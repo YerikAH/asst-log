@@ -20,7 +20,7 @@ const getChartOptions = () => {
         show: false,
       },
       style: {
-        fontFamily: "Lexend, sans-serif",
+        fontFamily: "Inter, sans-serif",
       },
     },
     plotOptions: {
@@ -30,14 +30,14 @@ const getChartOptions = () => {
             show: true,
             name: {
               show: true,
-              fontFamily: "Lexend, sans-serif",
+              fontFamily: "Inter, sans-serif",
               offsetY: 40,
             },
             total: {
               showAlways: true,
               show: true,
               label: "Usuarios",
-              fontFamily: "Lexend, sans-serif",
+              fontFamily: "Inter, sans-serif",
               formatter: function (w) {
                 const sum = w.globals.seriesTotals.reduce((a, b) => {
                   return a + b;
@@ -47,7 +47,7 @@ const getChartOptions = () => {
             },
             value: {
               show: true,
-              fontFamily: "Lexend, sans-serif",
+              fontFamily: "Inter, sans-serif",
               offsetY: -10,
               formatter: function (value) {
                 return value + "k";
@@ -69,7 +69,7 @@ const getChartOptions = () => {
     },
     legend: {
       position: "bottom",
-      fontFamily: "Lexend, sans-serif",
+      fontFamily: "Inter, sans-serif",
     },
     yaxis: {
       labels: {

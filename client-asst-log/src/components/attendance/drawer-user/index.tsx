@@ -359,31 +359,20 @@ export const DrawerUser = ({ open, setOpen }: Props) => {
                   </div>
                 </div>
                 <div>
-                  <div>
-                    <img
-                      src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg"
-                      className="w-full h-40 object-cover"
-                      alt="avatar"
-                    />
-                  </div>
-                  <div className="pb-1 sm:pb-6">
-                    <div>
-                      <div className="mt-6 px-4 sm:mt-8 sm:flex sm:items-end sm:px-6">
-                        <div className="sm:flex-1">
-                          <div className="w-full">
-                            <div className="flex items-center w-full">
-                              <h3 className="text-xl font-bold text-gray-900 sm:text-2xl font-lexend truncate w-full">
-                                Vasquez Huaranga Harvey
-                              </h3>
-                              <span className="ml-2.5 inline-block h-2 w-2 flex-shrink-0 rounded-full bg-green-400 font-lexend ">
-                                <span className="sr-only">Online</span>
-                              </span>
-                            </div>
-                            <p className="text-sm text-gray-500 font-lexend">
-                              yerik05vh@gmail.com
-                            </p>
-                          </div>
-                        </div>
+                  <div className="pb-1 sm:pb-6 mt-5">
+                    <div className="flex px-4 sm:px-6 items-start gap-4">
+                      <img
+                        src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg"
+                        className="size-24 rounded-full object-cover"
+                        alt="avatar"
+                      />
+                      <div className="">
+                        <h3 className="text-xl font-bold text-gray-900 sm:text-base font-lexend  w-full text-left">
+                          Vasquez Huaranga Harvey Yerik
+                        </h3>
+                        <p className="text-sm text-gray-500 font-lexend text-left">
+                          yerik05vh@gmail.com
+                        </p>
                       </div>
                     </div>
                   </div>

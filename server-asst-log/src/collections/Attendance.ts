@@ -15,6 +15,7 @@ const Attendance: CollectionConfig = {
       type: "text",
       required: true,
       label: "Nombre de la asistencia",
+      unique: true,
     },
     {
       name: "password",
@@ -28,6 +29,22 @@ const Attendance: CollectionConfig = {
       relationTo: "business",
       required: true,
       label: "Empresa a la que pertenece la asistencia",
+      validate: async (value, { req }) => {
+        if (!value) {
+          return "La empresa es requerida.";
+        }
+
+        const business = await req.payload.findByID({
+          collection: "business",
+          id: value,
+        });
+
+        if (!business) {
+          return "La empresa seleccionada no es válida.";
+        }
+
+        return true;
+      },
     },
     {
       name: "schudule",
@@ -156,14 +173,14 @@ const Attendance: CollectionConfig = {
     },
 
     {
-      name: "register",
+      name: "methods",
       type: "array",
       required: true,
       fields: [
         {
-          name: "register",
+          name: "method",
           type: "relationship",
-          relationTo: "register",
+          relationTo: "method-attendance",
           required: true,
         },
       ],

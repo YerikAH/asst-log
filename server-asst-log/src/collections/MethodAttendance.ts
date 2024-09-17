@@ -1,7 +1,7 @@
 import { CollectionConfig } from "payload/types";
 
-export const Register: CollectionConfig = {
-  slug: "register",
+export const MethodAttendace: CollectionConfig = {
+  slug: "method-attendance",
   labels: {
     plural: "Registros",
     singular: "Registro",
@@ -27,4 +27,4 @@ export const Register: CollectionConfig = {
   ],
 };
 
-export default Register;
+export default MethodAttendace;
