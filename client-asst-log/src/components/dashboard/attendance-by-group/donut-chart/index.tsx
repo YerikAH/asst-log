@@ -38,7 +38,7 @@ const getChartOptions = () => {
               show: true,
               label: "Usuarios",
               fontFamily: "Inter, sans-serif",
-              formatter: function (w) {
+              formatter: function (w: any) {
                 const sum = w.globals.seriesTotals.reduce((a, b) => {
                   return a + b;
                 }, 0);
@@ -49,7 +49,7 @@ const getChartOptions = () => {
               show: true,
               fontFamily: "Inter, sans-serif",
               offsetY: -10,
-              formatter: function (value) {
+              formatter: function (value: string) {
                 return value + "k";
               },
             },
@@ -73,14 +73,14 @@ const getChartOptions = () => {
     },
     yaxis: {
       labels: {
-        formatter: function (value) {
+        formatter: function (value: string) {
           return value + "k";
         },
       },
     },
     xaxis: {
       labels: {
-        formatter: function (value) {
+        formatter: function (value: string) {
           return value + "k";
         },
       },
