@@ -41,6 +41,7 @@ const options = {
     style: {
       fontFamily: "Lexend, sans-serif",
     },
+    theme: "dark",
   },
   states: {
     normal: {
